@@ -1,4 +1,4 @@
-'''
+
 def conversor(tipo_pesos, valor_dolar):
     pesos = input ("cuantos pesos "+ tipo_pesos+" tienes? ")
     pesos = float(pesos)
@@ -27,7 +27,7 @@ else:
 
 
 
-2------------------
+#  2------------------
 
 
 
@@ -52,13 +52,13 @@ if imc >= 26 and imc < 30:
 if imc >= 30:
     print ('OBESIDAD')
 
-3---------------------
+#------3---------------------
 edad = int(input ("edad? "))
 mensaje = "mayor de edad" if edad >= 18 else "menor de edad"
 print(mensaje)
 
 
-4-------------------------
+#-----4-------------------------
 
 palabra = ''
 while palabra != 'salir':
@@ -66,7 +66,7 @@ while palabra != 'salir':
     print (f'la palabra es {palabra}')
 
 
-5------funciones lambda
+#  5------funciones lambda
 
 productos= [
     ('producto 1',10),
@@ -77,8 +77,11 @@ productos= [
 
 precios = list(map(lambda prodcuto: prodcuto[1], productos))
 print (precios)
+# 2da opcion 
+precios2 = [item[1] for item in productos]
+print(precios2)
 
-6-----------------------------------
+# 6-----------------------------------
 numbers = {"a":2, "b":"juan", "c":5}
 
 for i in numbers:
@@ -97,7 +100,7 @@ numero2 = int(input('elige un numero par '))
 resultado = numero + numero2
 print('este es ' + str(resultado))
 
-7-------------------------------
+#7-------------------------------
 
 productos= ["1","2","3","4"] 
 productos= (1,2,3,4,5)
@@ -118,21 +121,20 @@ productos2 = (1,2,3,5,6)
 precio = list(map(lambda element : element[1]* 2,productos))
 precio = list(map(lambda element : element * 2,productos2))
 precio3 = [item[0] for item in productos]
-
 print (precio3)
  
 
 
 
-# Recorriendo una list con indice y valor...
+#  8-------Recorriendo una list con indice y valor...
 mylist = ["perro","gato","loro","pajaro"]
 for i in (mylist):
     #print(i) 
-    print("soy un " (i) + " y soy el numero" + mylist(i+1))
+    print("soy un " (i) + " y soy el numero" + 'mylist(i+1)')
 
 
 
-# conexion con Mysql
+# 9------Conexion con Mysql
 
 import mysql.connector
 
@@ -154,6 +156,9 @@ myresult = mycursor.fetchall()
 
 print(myresult)
 
+
+
+# 10 ------
 class Humano:
     def __init__(self):
         print("soy un nuevo obejto")
@@ -163,7 +168,9 @@ pedro = Humano()
 raul = Humano()
 pedro.hablar("soy Pedro")
 raul.hablar("hola Pedro")
-'''
+
+
+# 11 -----------
 
 def conversor(tipo_pesos, valor_dolar):
     pesos = input("cauntos pesos tenes "+ tipo_pesos+ "tenes?")
@@ -172,13 +179,15 @@ def conversor(tipo_pesos, valor_dolar):
     dolares = str (dolares)
     print ("tenes $" + dolares+ " dolares")
 
-menu = """
+
+menu = '''
 BIenvenido al conversor
 1-Pesos colombianos
 2-Pesos arg
 3-Pesos mexicanos
 
-Elige una opcion: """
+Elige una opcion: 
+'''
 
 
 opcion = int(input(menu))
@@ -190,4 +199,12 @@ elif opcion == 2:
 elif opcion == 3:
         conversor("mexi", 24)
 else:
-            print("ingrsa una opcion correcta") 
+            print("ingresa una opcion correcta") 
+
+
+# 12 ---------
+
+list = [1,2,3,4,5]
+filtered_list = filter(lambda number: number % 2 == 0, list)
+even_numbers = list(filtered_list)
+print(even_numbers)
